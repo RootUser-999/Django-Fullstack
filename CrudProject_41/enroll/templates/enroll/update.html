@@ -1,0 +1,11 @@
+{% extends 'enroll/base.html' %}
+{% block content%}
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="update">
+        <a href="/">Go Back To Home</a>
+    </form>
+</div>
+{% endblock content %}

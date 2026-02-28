@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            color: black;
+        }
+        body h1 span{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    {% if u == 'admin' %}
+    <h1>Hello <span>{{n | upper}}</span> you are <span>{{u |upper}}</span> and this is admin template two</h1>
+    
+    {% elif u == 'guest' %}
+    <h1>Hello <span>{{n | upper}}</span> you are <span>{{u |upper}}</span> and this is admin template two</h1>
+    
+    {% else %}
+    <h1>Sorry Unknown user type <span>{{u |upper}}</span></h1>
+    {% endif %}
+</body>
+</html>

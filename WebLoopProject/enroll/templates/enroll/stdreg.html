@@ -1,0 +1,12 @@
+{% extends 'core/core.html' %}
+{% block title %}Student Registration{% endblock title %}
+{% block content %}
+<div class="enroll-form-container">
+    <h2>Student Registration Form</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Register Now">
+    </form>
+</div>
+{% endblock content %}

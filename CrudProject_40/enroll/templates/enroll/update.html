@@ -1,0 +1,13 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+<div style="display: flex;flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    <h4 style="color: lightblue;">Update Student Information</h4>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Update" style="color: white; background-color: green; padding: 10px; border: none; cursor: pointer;">
+        <a href="/">Back to home</a>
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'core/core.html' %}
+{% block title %}Success - Message Sent{% endblock title %}
+{% block content %}
+<div class="contact-success-page">
+    <div class="contact-success-card">
+        <div class="contact-success-icon">✉️</div>
+        <h1>Message Successfully Sent!</h1>
+        <p class="contact-success-message">
+            Thank you for reaching out! Your message has been successfully sent to our team. 
+            We'll get back to you within 24 hours.
+        </p>
+        <div class="contact-success-buttons">
+            <a href="/" class="btn-contact-success">
+                ← Back to Home
+            </a>
+            <a href="{% url 'services' %}" class="btn-secondary-contact">
+                View Our Services
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

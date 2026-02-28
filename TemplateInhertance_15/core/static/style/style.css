@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(4, 40, 41);
+    color: rgb(255, 255, 255);
+}
+body nav ul{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: larger;
+    
+}
+body nav ul a{
+    color: white;
+    
+    text-decoration: none;
+}
+
+body nav{
+    border: solid black;
+    border-radius: 2px;
+
+}
+

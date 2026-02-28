@@ -1,0 +1,39 @@
+body{
+    margin:25px;
+    background-color: #0d0213;
+    color: white;
+}
+div img{
+    height: 100px;
+    width: 100px;
+    border: solid 1px white;
+    border-radius: 50%;
+}
+nav a{
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    height: 30px;
+    color: white;
+    margin: 5px;
+    font-size: larger;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+nav a:hover{
+    background-color: rgb(92, 92, 3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

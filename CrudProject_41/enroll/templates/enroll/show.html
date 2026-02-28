@@ -1,0 +1,42 @@
+{% extends 'enroll/base.html' %}
+{% block content%}
+<div>
+    <div>
+        <form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+    </div>
+    <div>
+        {% if stud %}
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+            {% for i in stud %}
+            <tr style="border: solid 1px;">
+                <td style="border: solid 1px; padding: 8px;">{{i.id}}</td>
+                <td style="border: solid 1px; padding: 8px;">{{i.name}}</td>
+                <td style="border: solid 1px; padding: 8px;">{{i.email}}</td> 
+                <td style="border: solid 1px; padding: 8px;">{{i.password}}</td>
+                <td>
+                    <form action="{% url 'delete' i.id %}" method="POST">
+                        {% csrf_token %}
+                    <input type="submit" value="delete">
+                </form>
+                </td>
+                <td><a href="{% url 'update' i.id %}">Update</a></td>
+                <br>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <h4>No data to preview</h4>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

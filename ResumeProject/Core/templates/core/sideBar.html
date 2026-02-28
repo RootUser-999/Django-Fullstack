@@ -1,0 +1,13 @@
+ {% load static %}
+ <div>
+   <div>
+    <img name="img1" src="{% static 'images/dp.jpg' %}" alt="">
+    </div>
+    </div>
+        <h3>Shahzeb Aman</h3>
+    <hr>
+    <nav style="display: flex; flex-direction: column;" >
+     <a href="/">Home</a>
+     <a href="{% url 'serv' %}">Services</a>
+     <a href="{% url 'edu' %}">Education</a>
+    </nav>

@@ -1,0 +1,22 @@
+{% extends 'core/core.html' %}
+{% block title %}Success - Enrollment Complete{% endblock title %}
+{% block content %}
+<div class="success-page">
+    <div class="success-card">
+        <div class="success-icon">✅</div>
+        <h1>Successfully Enrolled!</h1>
+        <p class="success-message">
+            Thank you for registering with WebLoop. Your enrollment has been successfully processed. 
+            We'll contact you shortly with next steps.
+        </p>
+        <div class="success-buttons">
+            <a href="/" class="btn-success">
+                ← Back to Home
+            </a>
+            <a href="{% url 'services' %}" class="btn-secondary-success">
+                Explore Services
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

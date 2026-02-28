@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div style="margin-top: 5;">
+        <h2 style="text-align: center; color: brown;">Function Based View ModelForm Crud Project</h2>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

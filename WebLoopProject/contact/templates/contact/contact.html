@@ -1,0 +1,12 @@
+{% extends 'core/core.html' %}
+{% block title %}Contact Us - Services{% endblock title %}
+{% block content %}
+<div class="contact-form-container">
+    <h2>Get In Touch</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Send Message">
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+</head>
+<body>
+    <form action="">
+        <h2>wellcome home</h2>
+        <img src="{% static 'images/ai.PNG' %}" alt=""><br>
+        <input type="text" placeholder="not working" id="name">
+        <input type="button" value="Submit" onclick="dis()">
+        <script src="{% static 'script/script.js' %}"></script>
+    </form>
+</body>
+</html>

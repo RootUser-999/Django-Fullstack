@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+        body h1 span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    {% if ut == 'guest' %}
+        <h1>Hello <span id="name">{{un |upper}}</span> you are <span> {{ut |upper}}</span> and this is 2nd Template</h1>
+    {% endif %}
+</body>
+</html>
