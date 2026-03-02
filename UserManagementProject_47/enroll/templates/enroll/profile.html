@@ -1,0 +1,28 @@
+{% extends 'enroll/base.html' %}
+{% block title %}Dashboard | UserMS{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <div class="dashboard-card">
+        <h2>Welcome Back 👋</h2>
+        <p class="subtitle">You're successfully logged in.</p>
+
+        <div class="user-box">
+            <div class="avatar">{{ request.user.username|slice:":1"|upper }}</div>
+            <div>
+                <h3>{{ request.user.username }}</h3>
+                <p>{{ request.user.email }}</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="{% url 'logout' %}" class="btn logout-btn">Log Out</a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

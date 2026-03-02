@@ -1,0 +1,17 @@
+{% extends 'enroll/base.html' %}
+{% block title %}Sign Up Page{% endblock %}
+
+{% block content %}
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        {% for fm in form %}
+            {{ fm.label_tag }}    {{ fm }} {{fm.errors|striptags}} <br><br>
+        
+        {% endfor %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+        <button type="submit">Sign Up</button>
+        <a href="{% url 'login' %}">Login</a>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'enroll/base.html' %}
+{% block title %}Login | UserMS{% endblock %}
+
+{% block content %}
+
+<section class="auth-wrapper">
+    <div class="auth-card">
+
+        <h2>Welcome Back</h2>
+        <p class="auth-sub">Sign in to continue</p>
+
+        <form method="POST" novalidate>
+            {% csrf_token %}
+
+            {% for fm in form %}
+                <div class="input-group">
+                    {{ fm.label_tag }}
+                    {{ fm }}
+                    <small class="error">{{ fm.errors|striptags }}</small>
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn auth-btn">Login</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Don't have an account?</p>
+            <a href="{% url 'signup' %}">Create Account</a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

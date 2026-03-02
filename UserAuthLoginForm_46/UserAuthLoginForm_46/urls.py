@@ -1,5 +1,5 @@
 """
-URL configuration for UserAuthCode_44 project.
+URL configuration for UserAuthLoginForm_46 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -19,5 +19,9 @@ from django.urls import path
 from enroll import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup/',views.sign_up)
+    path('signup/',views.sign_up,name='signup'),
+    path('login/',views.user_login,name='login'),
+    path('profile/',views.profile),
+    path('logout/',views.user_logout,name='logout')
+
 ]

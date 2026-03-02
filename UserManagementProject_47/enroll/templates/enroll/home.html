@@ -1,0 +1,26 @@
+{% extends 'enroll/base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="hero">
+        <h1>Professional <span>User Management System</span></h1>
+        <p>Secure, fast and modern solution for managing users, authentication and access control.</p>
+        <a href="{% url 'login' %}" class="btn">Get Started</a>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Secure Login</h3>
+            <p>Industry standard authentication system with full encryption.</p>
+        </div>
+        <div class="card">
+            <h3>User Management</h3>
+            <p>Create, update and control user access easily.</p>
+        </div>
+        <div class="card">
+            <h3>Admin Dashboard</h3>
+            <p>Powerful tools to monitor and control your application.</p>
+        </div>
+    </div>
+</div>{% endblock %}
