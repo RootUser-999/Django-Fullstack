@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div>
+    <!-- #display the posts in reverse -->
+    {% for p in post reversed %}
+    <h1>{{p.title}}</h1>
+    <p>{{p.description}}</p>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock content %}

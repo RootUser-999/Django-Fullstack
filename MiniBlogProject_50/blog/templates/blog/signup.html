@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block title %}Sign Up{% endblock title %}
+{% block content %}
+<form action="" method='POST'>
+    {% csrf_token %}
+    {% for fields in form %}
+        {{fields.label_tag}} {{fields}} {{fields.errors|striptags}} <br><br>
+    {% endfor %}
+    <input type="submit" value="Sign Up">
+</form>
+{% endblock content %}

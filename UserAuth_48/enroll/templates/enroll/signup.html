@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for fm in form %}
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <input type="submit" value="Sign Up">
+        <a href="{% url 'login' %}">Log In</a>
+        {% if messages %}
+        {% for m in messages %}
+        <small {% if m.tags  %} class="{{m.tags}}" {% endif %} >{{m}}</small>
+        {% endfor %}
+        {% endif %}
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends 'blog/base.html' %}
+{% block title %}Log In{% endblock title %}
+{% block content %}
+ <form action="" method="POST">
+            {% csrf_token %}
+             {% for fm in form %}
+            {{ fm.label_tag }}    {{ fm }} {{fm.errors|striptags}} <br><br>
+            {% endfor %}
+            <input type="submit" value="Post">
+            {% for m in messages %}
+                <p>{{ m }}</p>
+            {% endfor %}
+        </form>
+        <div>
+            {% if post %}
+            <table>
+                <thead>
+                    <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                
+                </thead>
+                <tbody>
+                    {% for p in post %}
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.title}}</td>
+                        <td>{{p.description}}</td>
+                        <td>
+                            <a href="{% url 'update_post' p.id %}">Edit</a>
+                            <form action="{% url 'delete_post' p.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="submit" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>No post available</p>
+            {% endif %}
+        </div>
+{% endblock content %}
+

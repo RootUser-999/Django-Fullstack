@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block title %}Log In{% endblock title %}
+{% block content %}
+<form action="" method='POST'>
+    {% csrf_token %}
+    {% for fields in form %}
+        {{fields.label_tag}} {{fields}} {{fields.errors|striptags}} <br><br>
+    {% endfor %}
+    <input type="submit" value="Log In">
+</form>
+{% endblock content %}

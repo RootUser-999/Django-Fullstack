@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block title %}Update Post{% endblock title %}
+{% block content %}
+    <h2>Update Post</h2>
+    <form action="{% url 'update_post' form.instance.id %}" method="POST">
+        {% csrf_token %}
+        {% for fm in form %}
+            {{ fm.label_tag }}    {{ fm }} {{fm.errors|striptags}} <br><br>
+        {% endfor %}
+        <input type="submit" value="Update">
+        {% for m in messages %}
+            <p>{{ m }}</p>
+        {% endfor %}
+    </form>
+{% endblock content %}
