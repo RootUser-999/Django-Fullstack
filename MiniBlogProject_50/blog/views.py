@@ -42,7 +42,7 @@ def user_logout(request):
     return HttpResponseRedirect('/login/')
 
 def user_post(request):
-    posts=Post.objects.filter(user=request.user)
+    posts=Post.objects.all()
     if request.method =='POST':
         form=UserPost(request.POST)
         if form.is_valid():

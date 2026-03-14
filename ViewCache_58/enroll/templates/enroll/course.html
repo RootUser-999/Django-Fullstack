@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load cache %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Course 1</li>
+        <li>Course 2</li>
+        
+    </ul>
+    {% cache 10 cache_name  %}
+    <p>This content is asdf cached.</p>
+    {% endcache %}
+
+</body>
+</html>
