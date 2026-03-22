@@ -54,6 +54,15 @@ def user_login(request):
 def user_logout(request):
     if request.user.is_authenticated:
         logout(request)
+        request.session.flush()
+        response = redirect('login')  # create response object
+
+        # delete all cookies from the client
+        for cookie in request.COOKIES:
+            response.delete_cookie(cookie)
+
+        return response  # <-- return the response that deleted cookies
+
     return redirect('login')
 
 # ------------------------------
