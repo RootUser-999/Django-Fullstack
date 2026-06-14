@@ -1,5 +1,5 @@
 """
-URL configuration for LowLevelCacheAPI_59 project.
+URL configuration for MiddleWareHooks_64 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from enroll import views
+from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.course, name='course'),
+    path('', views.home, name='home'),
+    path('pro/', views.process, name='process'),
+    path('exc/', views.exc, name='exception'),
 ]

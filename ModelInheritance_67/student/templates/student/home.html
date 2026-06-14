@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Roll No</th>
+            <th>Marks</th>
+        </tr>
+        {% for i in s %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.age }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.roll_no }}</td>
+            <td>{{ i.marks }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Teacher Information</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Subject</th>
+        </tr>
+        {% for i in t %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.age }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.subject }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h1>Contractor Information</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Payment</th>
+        </tr>
+        {% for i in c %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.age }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.payment }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
