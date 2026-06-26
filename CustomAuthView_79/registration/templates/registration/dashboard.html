@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <h1>Hello {{ user.username }}</h1>
+    {% comment %} <li><a href="{% url 'register' %}">Register</a></li> {% endcomment %}
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+</form>
+<form action="{% url 'changepass' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Change Password</button>
+</form>
+</body>
+</html>
